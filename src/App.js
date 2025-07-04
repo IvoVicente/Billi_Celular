@@ -1,10 +1,14 @@
 import './App.css';
-import CriarConta from './components/views/CriarConta/CriarConta'
+import AppRoutes from './router';
+
 function App() {
   return (
-    <div className="App">
-      <CriarConta />
-    </div>
+  
+      <div className="App">
+
+        <AppRoutes />
+      </div>
+
   );
 }
 

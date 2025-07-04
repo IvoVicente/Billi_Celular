@@ -1,7 +1,9 @@
 import React from 'react';
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { AiOutlineEye } from 'react-icons/ai';
+import { RiEyeCloseLine } from 'react-icons/ri';
 
 import './CriarConta.css';
+import { Link } from 'react-router-dom';
 
 function CriarConta() {
     const [showPassword, setShowPassword] = React.useState(false);
@@ -50,7 +52,7 @@ function CriarConta() {
                             autoComplete="new-password"
                         />
                         <span className='icon-olho' onClick={() => setShowPassword(!showPassword)}>
-                            {showPassword ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
+                            {showPassword ? <RiEyeCloseLine size={20} /> : <AiOutlineEye size={20} />}
                         </span>
                     </div>
 
@@ -62,9 +64,7 @@ function CriarConta() {
                             onChange={(e) => setConfirmaSenha(e.target.value)}
                             autoComplete="new-password"
                         />
-                        <span className='icon-olho' onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
-                            {showConfirmPassword ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
-                        </span>
+                        
                     </div>
 
                     <label className='checkbox'>
@@ -74,7 +74,7 @@ function CriarConta() {
                             checked={aceitoPolitica}
                             onChange={(e) => setAceitoPolitica(e.target.checked)}
                         />
-                        <span>Li e concordo com a <a href="#">Política de Privacidade</a></span>
+                        <span>Li e concordo com a <Link to="/Termo">Política de Privacidade</Link></span>
                     </label>
 
                     <div className="botoes-container">

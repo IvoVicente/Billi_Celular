@@ -42,9 +42,6 @@
         margin-top: 10px;
     }
 
-    .pos {
-        
-    }
 
     form {
         flex-grow: 1;
@@ -115,8 +112,8 @@
         text-decoration: none;
     }
 
-    .checkbox input:checked+span {
-        color: black;
+     input[type="checkbox"] {
+      accent-color: black; 
     }
 
     .botoes-container {
@@ -138,8 +135,8 @@
     }
 
     .submit-botao:enabled {
-        background: #222;
-        color: #fff;
+        background: #E7BB0D;
+        color: black;
         cursor: pointer;
     }
 
