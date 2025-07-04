@@ -1,9 +1,9 @@
 import React from 'react';
-import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineClose } from 'react-icons/ai';
 import { RiEyeCloseLine } from 'react-icons/ri';
 
 import './CriarConta.css';
-import { Link } from 'react-router-dom';
+import { Link, Links } from 'react-router-dom';
 
 function CriarConta() {
     const [showPassword, setShowPassword] = React.useState(false);
@@ -26,14 +26,14 @@ function CriarConta() {
     }, [email, senha, confirmaSenha, aceitoPolitica]);
 
     return (
-        <div className='pos'>
-        <div className="CriarConta">
-            <div className='header'>
-                <h1>Crie a sua conta</h1>
-                <button className='fecha-botao'>x</button>
-            </div>
+        <div>
+            <div className="CriarConta">
+                <div className='header'>
+                    <h1>Crie a sua conta</h1>
+                    <button className='fecha-botao'><AiOutlineClose /></button >
+                </div>
 
-            
+
                 <form>
                     <input
                         type='email'
@@ -64,7 +64,7 @@ function CriarConta() {
                             onChange={(e) => setConfirmaSenha(e.target.value)}
                             autoComplete="new-password"
                         />
-                        
+
                     </div>
 
                     <label className='checkbox'>
